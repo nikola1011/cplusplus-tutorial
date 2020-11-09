@@ -31,7 +31,6 @@ class Person {
         // The default constructor is called when an object is created with no arguments specified at its' declaration
         Person()
         {
-            name = new char[50];
             name = "John Doe";
             age = 0;
             // No return statement (just initialize class members)
@@ -40,7 +39,6 @@ class Person {
         // Constructor containing some parameters
         Person(char* name, int age)
         {
-            this->name = new char[140];
             this->name = name;
             this->age = age;
         }
@@ -50,11 +48,7 @@ class Person {
         // No return type. Function name that matches class name with '~' prefix.
         // Has no parameters.
         // The purpose of the destructor is to free the resources that the object may have acquired during its lifetime.
-        ~Person()
-        {
-            // Free 'name' variable memory
-            delete[] name;
-        }
+        ~Person() { /* No need for any deletion as nothing was allocated with 'new' keyword */ }
 
         // All function implementations within inside the class are considered 'inline'
         void introduce()
