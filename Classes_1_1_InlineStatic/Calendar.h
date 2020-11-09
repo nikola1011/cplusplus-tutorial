@@ -25,6 +25,7 @@ public:
     // Automatic inline function (as implementation is in header file)
     char* getMyFavoriteMonth()
     {
+        // Inline functions are concise, short and readable.
         return this->myFavoriteMonth;
     }
 
