@@ -33,5 +33,16 @@ int main()
     c.setMyFavoriteDay("Tuesday");
     c.getMyFavoriteDay();
 
+    /// HOMEWORK
+    // Write a class that has:
+        // Header and Source file (.h and .cpp) file
+        // Constructor, destructor (REMEMBER to delete/deallocate unused memory)
+        // Two static variables (double and char*)
+        // Two static methods
+        // One implicit inline method
+        // One explicit inline method
+        // Implement a method to read from standard input (cin) and store data in variables and then show it on standard output (cout)
+    
     return 0;
 }
+
