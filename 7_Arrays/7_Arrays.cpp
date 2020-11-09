@@ -58,7 +58,6 @@ int main()
 
 	int hyperCubes[4][10][5][5]; // 4 * 10 * 5 * 5 elements
 }
-// ALSO ADD character arrays here
 
 void printArray(double a[], int n)
 {
