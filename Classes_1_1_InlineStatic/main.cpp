@@ -5,7 +5,7 @@
 //C++ classes (and often function prototypes) are normally split up into two files.
 //The header file has the extension of .h and contains class definitions and functions.
 //The implementation of the class goes into the .cpp file.
-//By doing this, if your class implementation doesn’t change then it won’t need to be recompiled.
+//By doing this, if your class implementation doesnâ€™t change then it wonâ€™t need to be recompiled.
 //Also it keep the code clean and readable.
 
 using namespace std;
@@ -21,6 +21,12 @@ int main()
     Calendar::getCurrentTime();
 
     Calendar c; // Define object
+    // Class objects can also access static variables
+    cout << "Object year zero: " << c.yearZero << endl;
+    // And static functions
+    cout << "Current time through object call: " << endl;
+    c.getCurrentTime();
+
     c.setMyFavoriteMonth();
     cout << "Your favorite month is: " << c.getMyFavoriteMonth() << endl;
 
