@@ -39,8 +39,13 @@ class Person {
         // Constructor containing some parameters
         Person(char* name, int age)
         {
+            // The keyword 'this' represents a POINTER to the object whose member function is being executed.
+            // It referes to the object itself.
+            // Because it's a pointer '->' is used for dereferencing and member access.
             this->name = name;
-            this->age = age;
+
+            // this->age can be written as (*this).age as would have the same effect.
+            (*this).age = age;
         }
 
         // Destructor
