@@ -116,3 +116,32 @@ int main()
 
     return 0;
 } // Objects statically declared go out of scope here (and their destructors are called)
+
+/// HOMEWORK
+// Create a class Car
+    // Have private fields: char * model, int productionYear, float velocity, float accelerationInSeconds
+
+    // Has default constructor: Car()
+    // Has a constuctor with parameters
+        // Car(char* model, int prodYear, float velocity, float accelerationInSeconds)
+    // HINT: Remember that constructors MUST have 'public' access modifiers
+
+    // Has public functions:
+        // void print() - prints all fields on the standard output
+        // bool isSuperCar(float limit) - returns 'true' if the Car's velocity is greater than the 'limit' argument, otherwise 'false'
+        // void accelerate(float acceleration) - increment Car's velocity by acceleration parameter
+
+// Create any Car with default constructor
+    // Print Car fields with 'print()' function
+    // REMEMBER that everything should be initiliazed properly.
+
+// Create a Lamborghini Urus object in "dynamic" memory with constructor with parameters
+    // Print its specifications (object fields)
+    // See if it's a super car (use isSuperCar function)
+        // If no, use 'accelerate' function UNTIL Lamborghini becomes a super car.
+        // If yes, write "This is a super car"
+
+// delete/deallocate all memory before program termination
+    // Place `cout << "Constructor call" << endl;` in Constructors
+    // And `cout << "Destructor call" << endl;` in Destructors
+    // To see the objects' lifetime
