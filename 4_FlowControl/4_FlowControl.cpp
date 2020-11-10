@@ -66,7 +66,7 @@ int main()
         cout << "You entered: " << x << endl;
         if (x == 0)
         {
-            cout << "Exiting loop." << endl;;;;;;;;;;;;;;; // NO COMPILER ERROR
+            cout << "Exiting loop." << endl;;;;;;;;;;;;;;; // NO COMPILER ERROR on multiple ';' at the end of the statement
             break;
         }
     }
