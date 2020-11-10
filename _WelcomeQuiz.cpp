@@ -1,3 +1,4 @@
+// Introduction (me, course planning)
 // C znanje iz prethodne godine ? Polozen AIP ?
 // Trenutna godina studija, da li prvi put vide C++ ili znaju ponesto, polagali su ispite ?
 // C++ znanje / upoznavanje ?
@@ -14,7 +15,7 @@
 // Tipovi podataka u C++-u ? https://www.tutorialspoint.com/cplusplus/cpp_data_types.htm 
 // Razlike u tipovima podataka odnosu na C ? Primitivni tipovi su "isti" u oba jezika. User defined data types (classes) u C++.
 
-// Operatori ?
+////// Operators
 
 // Output from this ?
 int y = 10;
@@ -42,6 +43,8 @@ while (i > 0)
 	i++;
 }
 std::cout << i << std::endl;
+
+////// Functions
 
 // Kako se definise inline funkcija sa 'int' povratnim tipom, dva parametra float x i float y, gde je y ima defaultnu vrednost 10 ?
 // Razlika izmedju prenosa po referenci i vrednosti ?
@@ -83,3 +86,77 @@ callMe(4);
 
 // Sta su rekurzivne funkcije ?
 
+////// Arrays
+
+// How are arrays defined ?
+
+// Output from:
+int myIntArray [39] = { "111", "222" };
+std::cout << myIntArray[1] << std::endl;
+
+// Output from:
+int myIntArray [39] = { 111, 222 };
+std::cout << myIntArray[1] << " " << myIntArray[30] << std::endl;
+
+// Output from:
+int myIntArray [39];
+std::cout << myIntArray[4] << " " << myIntArray[14] << std::endl;
+
+////// Pointers
+
+// Kako C++ program vidi RAM memoriju racunara ?
+// Sta su pointeri ?
+// & - operator, * - operator ?
+
+// Output:
+int x = 329;
+int* myPointer;
+myPointer = &x;
+*myPointer = 4;
+std::cout << x << std::endl;
+
+// Da li su velicine sledecih promenljivi (pointera) iste ?
+int* myIntPointer;
+char* myCharPointer;
+float* myFloatPointer;
+
+// Output:
+int x = 329;
+int* p1, p2;
+
+p1 = &x;
+p2 = *p1;
+
+x = 111;
+std::cout << p2 << std::endl;
+
+// Output:
+int myIntArray[] = { 11, 12, 13, 14, 15, 16};
+int* pointerToArray = myIntArray;
+std::cout << *pointerToArray << std::endl;
+
+// Output:
+int myIntArray[] = { 11, 12, 13, 14, 15, 16};
+int* pointerToArray = myIntArray;
+pointerToArray += 4;
+*pointerToArray = 444;
+for (int i = 0; i < 6; i++)
+	std::cout << myIntArray[i] << " ";
+
+// Sta je NULL pointer ?
+
+////// Dynamic memory
+
+// Koliko memorije je zauzeto, kada je ona oslobodjena od strane programa ?
+int myStaticArray[32];
+
+// Sta je razlika izmedju sledece dve linije ?
+int myInt;
+int* dynamicInt = new int;
+
+// Cemu sluze sledeci operatori
+delete ptr;
+delete [] myArrayPtr;
+
+
+////// Classes
