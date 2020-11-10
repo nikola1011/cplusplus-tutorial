@@ -4,7 +4,7 @@
 * */
 #include <iostream> // Pretprocesor ukljucuje <iostream> biblioteku za obavljanje standardnog ulaza i izlaza (citanja sa tastature i ispisa na ekran, respektivno)
 
-// cout je dao standardne biblioteke
+// cout je deo standardne biblioteke
 // svi elementi standardne C++ biblioteke su deklarisani unutar namespace-a
 // u ovom slucaju taj namespace je 'std' (skraceno od standard)
 
@@ -13,7 +13,7 @@
 
 // Deklaracija funkcije
 // 'main' je glavna funkcija programa. Izvrsenje programa pocinje i zavrsava se sa 'main' funkcijom.
-// Svaka deklaracija funkcije ima povratni tip, naziv funkcije, ()  , i telo funkcije tj. blok naredbi.
+// Svaka deklaracija funkcije ima povratni tip, naziv funkcije, () , i telo funkcije tj. blok naredbi.
 int main()
 { // Pocetak bloka
 
