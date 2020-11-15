@@ -131,17 +131,18 @@ int main()
         // bool isSuperCar(float limit) - returns 'true' if the Car's velocity is greater than the 'limit' argument, otherwise 'false'
         // void accelerate(float acceleration) - increment Car's velocity by acceleration parameter
 
-// Create any Car with default constructor
-    // Print Car fields with 'print()' function
-    // REMEMBER that everything should be initiliazed properly.
+// In main function:
+    // Create Car (in static memory) with default and constructor with parameters
+        // Print each Car's fields with 'print()' function
+        // REMEMBER that everything should be initiliazed properly.
 
-// Create a Lamborghini Urus object in "dynamic" memory with constructor with parameters
-    // Print its specifications (object fields)
-    // See if it's a super car (use isSuperCar function)
-        // If no, use 'accelerate' function UNTIL Lamborghini becomes a super car.
-        // If yes, write "This is a super car"
+    // Create a 'Lamborghini' Car object in "dynamic" memory with constructor with parameters
+        // Print its specifications (object fields)
+        // See if it's a super car (use isSuperCar function)
+            // If no, use 'accelerate' function UNTIL Lamborghini becomes a super car.
+            // If yes, write "This is a super car"
 
-// delete/deallocate all memory before program termination
-    // Place `cout << "Constructor call" << endl;` in Constructors
-    // And `cout << "Destructor call" << endl;` in Destructors
-    // To see the objects' lifetime
+    // delete/deallocate all memory before program termination
+        // Place `cout << "Constructor call" << endl;` in Constructors
+        // And `cout << "Destructor call" << endl;` in Destructors
+        // To see the objects' lifetime
