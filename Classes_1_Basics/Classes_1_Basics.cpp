@@ -124,6 +124,7 @@ int main()
     // Has a constuctor with parameters
         // Car(char* model, int prodYear, float velocity, float accelerationInSeconds)
     // HINT: Remember that constructors MUST have 'public' access modifiers
+    // Has destructor that prints the "Car {model} is destroyed."
 
     // Has public functions:
         // void print() - prints all fields on the standard output
