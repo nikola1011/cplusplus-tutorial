@@ -116,8 +116,10 @@ int main()
     cout << "Value of NULL ptr: " << myNullPtr << endl;
 
     /// HOMEWORK
-        // Find element, print that element or ~'Not found' if the element is not in the given array
+        // Look for an element, print that element's memory address and index in the array or ~'Not found' if the element is not in the given array.
         // double* findMe(double doubleArray[], int length, double elementToFind);
+        // Function should NOT print anything. Printing is done in `main` function. Use function's return value to decide what to print.
+        
     int DOUBLE_ARRAY_LEN = 6;
     double myDoubleArray[] = { 23.23, 903.3, 1.0, 7777.777, 4309.1, 9999.999 };
     double *elementPtr = findMe(myDoubleArray, DOUBLE_ARRAY_LEN, 7777.777);
