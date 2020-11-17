@@ -6,9 +6,17 @@ using namespace std;
 // Classes should interact with operators (*, +, %, ==, !, ...) as other primitive types (int, float) can.
 // This can be done by operator overloading.
 
+// NOTES:
+// Operators ::  .  .*  ?: CANNOT be overloaded
+// New operators CANNOT be created
+// Precedence, grouping or number of operator operands cannot be changed
+// && and || lose short circut evaluation
+
 class Car
 {
 	int serialNumber;
+	const static int MAX_SERVICE_YEARS = 10;
+	float serviceYears[MAX_SERVICE_YEARS];
 
 public:
 	float velocity = 0;
@@ -16,6 +24,11 @@ public:
 	Car(int serialNumber) 
 	{ 
 		this->serialNumber = serialNumber;
+		this->serviceYears[0] = 0.5f;
+		this->serviceYears[1] = 1.2f;
+		this->serviceYears[2] = 2.5f;
+		this->serviceYears[3] = 2.5f;
+		this->serviceYears[4] = 5.0f;
 	}
 
 	int getSerialNumber() // inline function (whole class is inline)
@@ -49,7 +62,20 @@ public:
 		return *this;
 	}
 
+	float operator[](int i)
+	{
+		if (i < MAX_SERVICE_YEARS)
+		{
+			return this->serviceYears[i];
+		}
+		else
+		{
+			return -1;
+		}
+	}
+
 };
+
 int main()
 {
 	int SERIAL_NUMBER_1 = 11111111;
@@ -72,4 +98,13 @@ int main()
 	c3 = c1;
 	cout << "c3 serialNumber: " << c3.getSerialNumber() << endl;
 
+	const int serviceYear = 3;
+	cout << serviceYear << " service year " << c1[serviceYear - 1] << endl;
+
+
+	/// HOMEWORK
+		// Create `Complex` class.
+		// Has two private float fields: real, img
+		// Implement the following operators for `Complex` class:
+			// =, ==, !=, +, +=, -, -=
 }
