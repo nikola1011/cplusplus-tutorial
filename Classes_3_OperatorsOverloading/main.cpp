@@ -76,6 +76,16 @@ public:
 
 };
 
+
+// You can also declare overload operators outside the class.
+// But you no longer have access to `this` as you are no longer inside the class definition
+// Therefore you need to add another class parameter
+//Car& operator+(Car& car1, Car& car2)
+//{
+//	car1.velocity += car2.velocity;
+//	return car1;
+//}
+
 int main()
 {
 	int SERIAL_NUMBER_1 = 11111111;
