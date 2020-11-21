@@ -12,6 +12,19 @@ using namespace std;
 // Precedence, grouping or number of operator operands cannot be changed
 // && and || lose short circut evaluation
 
+// The parameter expected for a member function overload for operations such as operator+ is naturally the operand to the right hand side of the operator (common for all binary operators)
+// See the parameters and operators table below to understand how to declare parameters for overloading operator functions
+//
+//  NOTE: Replace '@' with the operand. `a` is an object of class A, `b` is an object of class B and `c` is an object of class C. `TYPE` is just any type.
+//
+//	@a + -*&!~++ --A::operator@()	operator@(A)
+//	a@	++ --A::operator@(int)	operator@(A, int)
+//	a@b + -*/ % ^&| < > == != <= >= << >> && || , A::operator@(B)	operator@(A, B)
+//	a@b = += -= *= /= %= ^= &= |= <<= >>= []	A::operator@(B)-
+//	a(b, c...)	()	A::operator()(B, C...) -
+//	a->b->A::operator->() -
+//	(TYPE)a	TYPE	A::operator TYPE() -
+
 class Car
 {
 	int serialNumber;
@@ -40,6 +53,9 @@ public:
 	// Whenever you compare two cars with '==', this method will be called
 	bool operator==(Car& car)
 	{
+		// leftOperand == rightOperand
+		// `this` is leftOperand
+		// `car` parameter is rightOperand
 		if (this->getSerialNumber() == car.getSerialNumber())
 			return true;
 		else
@@ -49,6 +65,7 @@ public:
 		// return this->getSerialNumber() == car.getSerialNumber();
 	}
 
+	// Member function operator overload
 	Car& operator+(Car& car)
 	{
 		Car temp(this->serialNumber);
@@ -78,13 +95,13 @@ public:
 };
 
 
-// You can also declare overload operators outside the class.
+// You can also declare overload operators outside the class -> NON member class operator overloading.
 // But you no longer have access to `this` as you are no longer inside the class definition
 // Therefore you need to add another class parameter
-//Car& operator+(Car& car1, Car& car2)
+//Car& operator+(Car& leftOperand, Car& rightOperand)
 //{
-//	car1.velocity += car2.velocity;
-//	return car1;
+//	leftOperand.velocity += rightOperand.velocity;
+//	return leftOperand;
 //}
 
 int main()
