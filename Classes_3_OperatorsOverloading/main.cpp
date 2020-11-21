@@ -51,8 +51,9 @@ public:
 
 	Car& operator+(Car& car)
 	{
-		this->velocity += car.velocity;
-		return *this;
+		Car temp(this->serialNumber);
+		temp.velocity = this->velocity + car.velocity;
+		return temp;
 	}
 
 	Car& operator=(Car& car)
@@ -100,7 +101,9 @@ int main()
 	//  The operator overloads are just regular functions which can have any behavior
 	c1.velocity = 40;
 	c2.velocity = 10;
-	cout << "Add cars together: " << (c1 + c2).velocity << endl;
+
+	Car resultCar = c1 + c2;
+	cout << "Add cars together: " << resultCar.velocity << endl;
 
 	Car c3(0);
 	
