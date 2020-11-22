@@ -29,8 +29,6 @@ public: // From this point onward all declared members have 'public' as their ac
     // No return type. Function name that matches class name.
     // Constructor with no parameters is also known as the default constructor
     // The default constructor is called when an object is created with no arguments specified at its' declaration
-    // Default constructor is implicitly created by compiler, BUT ONLY if no other constructors exist
-    // (if other constructor overloads exist, default constructor is not "generated" by compiler and must be explicitly defined alongside those constructors)
     Person()
     {
         name = "John Doe";
