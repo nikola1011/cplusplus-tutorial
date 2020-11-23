@@ -44,7 +44,7 @@ public:
 		this->serviceYears[4] = 5.0f;
 	}
 
-	int getSerialNumber() // inline function (whole class is inline)
+	int getSerialNumber() // Reminder: inline function (whole class is inline)
 	{
 		return serialNumber;
 	}
@@ -56,7 +56,7 @@ public:
 		// leftOperand == rightOperand
 		// `this` is leftOperand
 		// `car` parameter is rightOperand
-		if (this->getSerialNumber() == car.getSerialNumber())
+		if (this->serialNumber == car.serialNumber)
 			return true;
 		else
 			return false;
@@ -66,16 +66,16 @@ public:
 	}
 
 	// Member function operator overload
-	Car& operator+(Car& car)
+	Car operator+(const Car& car)
 	{
 		Car temp(this->serialNumber);
 		temp.velocity = this->velocity + car.velocity;
 		return temp;
 	}
 
-	Car& operator=(Car& car)
+	Car& operator=(const Car& car)
 	{
-		this->serialNumber = car.getSerialNumber();
+		this->serialNumber = car.serialNumber;
 		this->velocity = car.velocity;
 		return *this;
 	}
@@ -119,7 +119,8 @@ int main()
 	c1.velocity = 40;
 	c2.velocity = 10;
 
-	Car resultCar = c1 + c2;
+	Car resultCar(0);
+	resultCar = c1 + c2;
 	cout << "Add cars together: " << resultCar.velocity << endl;
 
 	Car c3(0);
