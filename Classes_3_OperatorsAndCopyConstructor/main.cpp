@@ -1,14 +1,3 @@
-// TODO:
-//
-//operatori
-//istream& operator>>
-//ostream & operator<<
-//
-//proucite -> "D:\OOP\OOP RV04 Primeri\C0403"
-
-
-// Fudbal club example
-
 #include <iostream>
 
 using namespace std;
@@ -96,12 +85,45 @@ public:
 		}
 	}
 
+	friend void wonChamptionship(FudbalClub& fc);
+	//{
+	//	// No `this` in friend functions
+	//	fc.numberOfThrophies++;		
+	//}
+
+	// Input and output stream operators must be declared as NON member functions (therefore operator overloads must be declared as `friend`)
+	friend ostream& operator<<(ostream& os, const FudbalClub& fc)
+	{
+		os << "FudbalClub\nThrophies: " << fc.numberOfThrophies << endl;
+
+		for (int i = 0; i < fc.currentScores; i++)
+			os << fc.scores[i] << " ";
+			
+		return os;
+	}
+		
+	friend istream& operator>>(istream& is, FudbalClub& fc);
+	
 	void printScores()
 	{
 		for (int i = 0; i < this->currentScores; i++)
 			cout << "Scores: " << this->scores[i] << endl;
 	}
 };
+
+void wonChamptionship(FudbalClub& fc)
+{
+	// No `this` in friend functions
+	fc.numberOfThrophies++;
+}
+
+// NOT a class member function
+istream& operator>>(istream& is, FudbalClub& fc)
+{
+	cout << "Enter number of throphies for the club:" << endl;
+	is >> fc.numberOfThrophies;
+	return is;
+}
 
 int main()
 {
@@ -118,13 +140,54 @@ int main()
 	FudbalClub fc3 = fc2; // Copy constructor called (still object initialization), NOT an assignment operator call
 
 	FudbalClub fc4; // Default constructor called
-	
+
 	// Manipulate the object attributes
 	fc4.currentlyInSeason = false;
 	fc4.numberOfThrophies = 3;
-	
+
 	// Assignment operator= called
 	fc4 = fc3;
 
+	// NOT A CLASS MEMBER
+	// fc4.wonChampionship();
 
+	cout << "Num of throphies: " << fc4.numberOfThrophies << endl;
+	wonChamptionship(fc4);
+	cout << "Num of throphies: " << fc4.numberOfThrophies << endl;
+
+	cout << fc4 << endl;
+	cin >> fc4;
+	cout << fc4 << endl;
+
+
+	/// HOMEWORK
+		// Study -> "D:\OOP\OOP RV04 Primeri\C0403"
+		
+		// class Radnik
+			// private: ime, prezime
+			// public: int radniSati [] (radni sati po danu, [8, 8, 6, 6, 8]). CUVATI U DINAMICKOJ MEMORIJI
+			
+			// Podrazumevani konstruktor
+			// Konstruktor koji postavlja sve atribute klase
+			// Destruktor (sta se radi u desktruktoru??)
+	
+			// friend funkciju koja racuna srednju vrednost radnih sati u mesecu
+
+			// Konstruktor za kopiranje (paznja na dinamicku memoriju)
+			// Predefinisan operator dodele (operator=)
+				// Obratiti paznju kada se poziva konstruktor za kopiranje, kada operator dodele.
+			
+			// Predefinisati >> i << operatore
+			// Kreirati objekat radnik1, uneti sve podatke (KORISTECI operator >>)
+			// Stampati sve podatke (KORISTECI operator <<)
+			// Izracunati i odstampati srednju vrednost svih sati za radnik1
+			
+			// Kreirati radnik2 uz pomoc konstruktora za kopiranje
+			// Odstampati vrednosti radnik2 objekta (treba da budu iste kao i radnik1)
+			
+			// Smanjiti sve radne sate za `radnik1` za 1
+			// Odstampati vrednosti radnik2 objekta (treba i dalje budu iste kao i radnik1)
+			// Izracunati i odstampati srednju vrednost svih sati za radnik2
+
+			// Osloboditi svu zauzetu dinamicku memoriju.
 }
