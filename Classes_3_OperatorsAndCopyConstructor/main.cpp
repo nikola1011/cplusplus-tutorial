@@ -32,8 +32,6 @@ public:
 	FudbalClub(const FudbalClub& fc)
 	{
 		// Deep copy (copy entire data from memory, not just pointers to the memory)
-		delete[] this->scores;
-
 		this->currentlyInSeason = fc.currentlyInSeason;
 		this->numberOfThrophies = fc.numberOfThrophies;
 
@@ -114,7 +112,8 @@ public:
 void wonChamptionship(FudbalClub& fc)
 {
 	// No `this` in friend functions
-	fc.numberOfThrophies++;
+	fc.numberOfThrophies++; // public class attribute
+	cout << "Total games played: " << fc.maxScores << endl; // private class attribute
 }
 
 // NOT a class member function
@@ -165,7 +164,7 @@ int main()
 		
 		// class Radnik
 			// private: ime, prezime
-			// public: int radniSati [] (radni sati po danu, [8, 8, 6, 6, 8]). CUVATI U DINAMICKOJ MEMORIJI
+			// private: int ukupnoRadnihSati, int radniSati [] (radni sati po danu, [8, 8, 6, 6, 8 ...]). Cuvati u dinamickoj zoni memorije.
 			
 			// Podrazumevani konstruktor
 			// Konstruktor koji postavlja sve atribute klase
@@ -177,17 +176,19 @@ int main()
 			// Predefinisan operator dodele (operator=)
 				// Obratiti paznju kada se poziva konstruktor za kopiranje, kada operator dodele.
 			
+			// Predefinisan operator[] - vraca element iz niza `radniSati`
+			
 			// Predefinisati >> i << operatore
-			// Kreirati objekat radnik1, uneti sve podatke (KORISTECI operator >>)
-			// Stampati sve podatke (KORISTECI operator <<)
-			// Izracunati i odstampati srednju vrednost svih sati za radnik1
+			// Kreirati objekat `radnik1`, uneti sve podatke (koristeci operator >>)
+			// Stampati sve podatke (koristeci operator <<)
+			// Izracunati i odstampati srednju vrednost svih sati za `radnik1`
 			
-			// Kreirati radnik2 uz pomoc konstruktora za kopiranje
-			// Odstampati vrednosti radnik2 objekta (treba da budu iste kao i radnik1)
+			// Kreirati `radnik2` uz pomoc konstruktora za kopiranje - kreirati ga u dinamickoj zoni memorije
+			// Odstampati vrednosti `radnik2` objekta (treba da budu iste kao i `radnik1`)
 			
-			// Smanjiti sve radne sate za `radnik1` za 1
-			// Odstampati vrednosti radnik2 objekta (treba i dalje budu iste kao i radnik1)
-			// Izracunati i odstampati srednju vrednost svih sati za radnik2
+			// Smanjiti sve radne sate za `radnik1` za 1(jedan sat)
+			// Odstampati vrednosti `radnik2` objekta (treba da budu iste kao u trenutku kreiranja `radnik2` objekta)
+			// Izracunati i odstampati srednju vrednost svih sati za `radnik2` (treba da bude razlicita od vrednosti za ``radnik1` objekat)
 
-			// Osloboditi svu zauzetu dinamicku memoriju.
+			// Osloboditi svu zauzetu dinamicku memoriju
 }
