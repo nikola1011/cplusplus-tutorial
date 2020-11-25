@@ -73,6 +73,9 @@ public:
 		return temp;
 	}
 
+	// Non member function operator overload
+	friend Car operator-(const Car& car1, const Car& car2);
+	
 	Car& operator=(const Car& car)
 	{
 		this->serialNumber = car.serialNumber;
@@ -94,6 +97,13 @@ public:
 
 };
 
+// Non member function operator overload (must be declared friend)
+Car operator-(const Car& car1, const Car& car2)
+{
+	Car temp(car1.serialNumber);
+	temp.velocity = car1.velocity - car2.velocity;
+	return temp;
+}
 
 // You can also declare overload operators outside the class -> NON member class operator overloading.
 // But you no longer have access to `this` as you are no longer inside the class definition
@@ -122,6 +132,9 @@ int main()
 	Car resultCar(0);
 	resultCar = c1 + c2;
 	cout << "Add cars together: " << resultCar.velocity << endl;
+
+	resultCar = c1 - c2;
+	cout << "Substract cars: " << resultCar.velocity << endl;
 
 	Car c3(0);
 	
