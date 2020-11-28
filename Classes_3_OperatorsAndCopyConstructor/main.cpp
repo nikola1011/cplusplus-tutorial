@@ -83,6 +83,26 @@ public:
 		}
 	}
 
+	// The prefix form of the operator is declared exactly the same way as any other unary operator;
+	// the postfix form accepts an additional argument of type int.
+
+	// Prefix (no parameter)
+	FudbalClub& operator++()
+	{
+		for (int i = 0; i < this->currentScores; i++)
+			this->scores[i] += 1;
+		
+		return *this;
+	}
+
+	// Postfix (int parameter - MUST be int parameter)
+	FudbalClub operator++(int n)
+	{
+		FudbalClub temp = *this;
+		++ (*this);
+		return temp;
+	}
+
 	friend void wonChamptionship(FudbalClub& fc);
 	//{
 	//	// No `this` in friend functions
@@ -158,6 +178,12 @@ int main()
 	cin >> fc4;
 	cout << fc4 << endl;
 
+	// Postfix operator call
+	fc4++;
+	cout << fc4  << endl;
+
+	// Prefix operator call
+	cout << ++fc4 << endl;
 
 	/// HOMEWORK
 		// Study -> "D:\OOP\OOP RV04 Primeri\C0403"
