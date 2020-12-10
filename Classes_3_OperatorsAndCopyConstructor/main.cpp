@@ -81,6 +81,8 @@ public:
 			for (int i = 0; i < this->currentScores; i++)
 				this->scores[i] = fc.scores[i];
 		}
+
+		return *this;
 	}
 
 	// The prefix form of the operator is declared exactly the same way as any other unary operator;
