@@ -37,7 +37,7 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Classes_4_InheritanceAccess
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Classes_4_InheritanceBasics", "Classes_4_InheritanceBasics\Classes_4_InheritanceBasics.vcxproj", "{6E43AF84-251D-4C5B-B763-889607C2293D}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Classes_3_MatrixOfObjectsOperatorsIO", "Classes_3_MatrixOfObjectsOperatorsIO\Classes_3_MatrixOfObjectsOperatorsIO.vcxproj", "{FF6DB9D8-24C8-4FC3-9058-AEC6E6A5E5E0}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Classes_3_ArrayOfObjectsOperatorsIO", "Classes_3_ArrayOfObjectsOperatorsIO\Classes_3_ArrayOfObjectsOperatorsIO.vcxproj", "{FF6DB9D8-24C8-4FC3-9058-AEC6E6A5E5E0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
