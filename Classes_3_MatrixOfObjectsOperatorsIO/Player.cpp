@@ -46,12 +46,12 @@ bool Player::operator>=(const Player& p)
 
 bool Player::operator<(const Player& p)
 {
-	return !(this->pay >= p.pay);
+	return !(*this >= p);
 }
 
 bool Player::operator<=(const Player& p)
 {
-	return !(this->pay > p.pay);
+	return !(*this > p);
 }
 
 ostream& operator<<(ostream& os, const Player& p)

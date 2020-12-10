@@ -24,6 +24,7 @@
     <ProjectGuid>{ff6db9d8-24c8-4fc3-9058-aec6e6a5e5e0}</ProjectGuid>
     <RootNamespace>Classes3MatrixOfObjectsOperatorsIO</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <ProjectName>Classes_3_ArrayOfObjectsOperatorsIO</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
