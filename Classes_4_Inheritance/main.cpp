@@ -45,7 +45,7 @@ public:
     }
 };
 
-class ProtectedDerived : private Base // note: private inheritance
+class ProtectedDerived : protected Base // note: private inheritance
 {
     // Protected inheritance means:
     // Public inherited members become protected (so m_public is treated as protected)
