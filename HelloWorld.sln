@@ -39,6 +39,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Classes_4_InheritanceBasics
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Classes_3_ArrayOfObjectsOperatorsIO", "Classes_3_ArrayOfObjectsOperatorsIO\Classes_3_ArrayOfObjectsOperatorsIO.vcxproj", "{FF6DB9D8-24C8-4FC3-9058-AEC6E6A5E5E0}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Classes_4_VirtualFunctions", "Classes_4_VirtualFunctions\Classes_4_VirtualFunctions.vcxproj", "{5E2C18EF-9FBA-40B1-843E-6EFC5285DA9D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -191,6 +193,14 @@ Global
 		{FF6DB9D8-24C8-4FC3-9058-AEC6E6A5E5E0}.Release|x64.Build.0 = Release|x64
 		{FF6DB9D8-24C8-4FC3-9058-AEC6E6A5E5E0}.Release|x86.ActiveCfg = Release|Win32
 		{FF6DB9D8-24C8-4FC3-9058-AEC6E6A5E5E0}.Release|x86.Build.0 = Release|Win32
+		{5E2C18EF-9FBA-40B1-843E-6EFC5285DA9D}.Debug|x64.ActiveCfg = Debug|x64
+		{5E2C18EF-9FBA-40B1-843E-6EFC5285DA9D}.Debug|x64.Build.0 = Debug|x64
+		{5E2C18EF-9FBA-40B1-843E-6EFC5285DA9D}.Debug|x86.ActiveCfg = Debug|Win32
+		{5E2C18EF-9FBA-40B1-843E-6EFC5285DA9D}.Debug|x86.Build.0 = Debug|Win32
+		{5E2C18EF-9FBA-40B1-843E-6EFC5285DA9D}.Release|x64.ActiveCfg = Release|x64
+		{5E2C18EF-9FBA-40B1-843E-6EFC5285DA9D}.Release|x64.Build.0 = Release|x64
+		{5E2C18EF-9FBA-40B1-843E-6EFC5285DA9D}.Release|x86.ActiveCfg = Release|Win32
+		{5E2C18EF-9FBA-40B1-843E-6EFC5285DA9D}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
