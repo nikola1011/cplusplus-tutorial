@@ -33,7 +33,7 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Classes_3_OperatorsOverload
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Classes_3_OperatorsAndCopyConstructor", "Classes_3_OperatorsAndCopyConstructor\Classes_3_OperatorsAndCopyConstructor.vcxproj", "{7FF249AD-7A8E-4D2B-9F5A-D4B6A880D65C}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Classes_4_InheritanceAccessSpecifiers", "Classes_4_Inheritance\Classes_4_Inheritance.vcxproj", "{E7841258-3D48-4297-8230-E0C47002E86F}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Classes_4_InheritanceAccessSpecifiers", "Classes_4_InheritanceAccessSpecifiers\Classes_4_InheritanceAccessSpecifiers.vcxproj", "{E7841258-3D48-4297-8230-E0C47002E86F}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Classes_4_InheritanceBasics", "Classes_4_InheritanceBasics\Classes_4_InheritanceBasics.vcxproj", "{6E43AF84-251D-4C5B-B763-889607C2293D}"
 EndProject
