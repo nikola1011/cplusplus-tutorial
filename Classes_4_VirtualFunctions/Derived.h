@@ -16,6 +16,13 @@ public:
 		return 0;
 	}
 
+	int callBaseFunctionTest() 
+	{
+		Base::nonVirtualFunc();
+		// nonVirtualFunc();
+		return 0;
+	}
+
 	~Derived()
 	{
 		cout << "DERIVED - Destructor call." << endl;

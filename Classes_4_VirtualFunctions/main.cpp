@@ -15,6 +15,8 @@ int main()
     Derived derived;
     derived.nonVirtualFunc();
     derived.virtualFunc(); 
+    cout << "\n\nCall base function ------------------------------------------ " << endl;
+    derived.callBaseFunctionTest();
 
     Base* basePtr;
 

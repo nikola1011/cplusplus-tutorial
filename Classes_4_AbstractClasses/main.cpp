@@ -28,7 +28,7 @@ public:
 class Rectangle : public Polygon 
 {
 public:
-    int area(void)
+    int area()
     {
         return (width * height);
     }
@@ -37,7 +37,7 @@ public:
 class Triangle : public Polygon 
 {
 public:
-    int area(void)
+    int area()
     {
         return (width * height / 2);
     }
@@ -52,13 +52,18 @@ int main()
     Rectangle rect;
     Triangle triangle;
     
-    Polygon* ppoly1 = &rect; // Pointer of abstract class can exist
-    Polygon* ppoly2 = &triangle;
+    Polygon* polyRect = &rect; // Pointer of abstract class can exist
+    Polygon* polyTriangle = &triangle;
 
-    ppoly1->setValues(4, 5);
-    ppoly2->setValues(4, 5);
-    ppoly1->printArea();
-    ppoly2->printArea();
+    polyRect->setValues(4, 5);
+    polyTriangle->setValues(4, 5);
+
+    polyRect->printArea();
+    polyTriangle->printArea();
+
+    // Direct pure virtual function call
+    cout << "Area for Rectangle " << polyRect->area() << endl;
+    cout << "Area for Triangle " << polyTriangle->area() << endl;
 
     return 0;
 }
