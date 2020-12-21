@@ -1,4 +1,6 @@
 #include <iostream>
+#include "Complex.h"
+#include "Decimal.h"
 
 using namespace std;
 
@@ -46,6 +48,19 @@ int main()
         cout << "x and y are equal" << endl;
     else
         cout << "x and y are not equal" << endl;
+
+    Complex c1(11.1f, 33.3f), c2(11.1f, 33.3f);
+    cout << "Are complex numbers equal: " << areEqual(c1, c2) << endl;
+    // Next line is equivalent to previous one
+    cout << "Are complex numbers equal: " << areEqual<Complex>(c1, c2) << endl;
+
+    Decimal d1(11.1f), d2(22.222f);
+    cout << "Are decimal numbers equal: " << areEqual(d1, d2) << endl;
+    // Next line is equivalent to previous one
+    cout << "Are decimal numbers equal: " << areEqual<Decimal>(d1, d2) << endl;
+
+    // Compile error if appropriate operator overload to compare Decimal to Complex does not exist
+    // cout << "Is decimal equal to complex: " << areEqual<Decimal, Complex>(d1, c1) << endl;
 
     cout << "Fixed multiply (non type arguments): " << fixedMultiply<int, 2>(10) << endl;
     cout << "Fixed multiply (non type arguments): " << fixedMultiply<int, 3>(10) << endl;
