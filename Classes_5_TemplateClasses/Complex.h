@@ -5,16 +5,15 @@ using namespace std;
 class Complex
 {
 public:
-	float real, img;
+	char* test;
 
-	Complex() : real(0), img(0) {}
-	Complex(float r, float i) : real(r), img(i) {}
-	~Complex() {}
-
-	friend ostream& operator<<(ostream& output, const Complex& obj);
+	Complex(const char* t)
+	{
+		this->test = new char[strlen(t) + 1];
+		strcpy_s(this->test, strlen(t) + 1, t);
+	}
+	~Complex()
+	{
+		delete[] this->test;
+	}
 };
-
-ostream& operator<<(ostream& output, const Complex& obj)
-{
-	return output << "Real: " << obj.real << " Imag: " << obj.img;
-}
