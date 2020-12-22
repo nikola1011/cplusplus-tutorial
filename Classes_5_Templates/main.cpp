@@ -13,6 +13,15 @@ T sum(T a, T b)
     return result; // T can also be the return type
 }
 
+// When previous template function is called for `int` instead of `T`,
+// the compiler will generate the following code:
+// int sum(int a, int b)
+// {
+//     int result;
+//     result = a + b;
+//     return result;
+// }
+
 template <class T, class U> // Use multiple parameters
 bool areEqual(T a, U b)
 {

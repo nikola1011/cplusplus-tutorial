@@ -35,7 +35,7 @@ public:
         return this->current == this->capacity;
     }
 
-    friend ostream& operator<< <>(ostream& output, const Stack<T>& obj);
+    friend ostream& operator<< <T>(ostream& output, const Stack<T>& obj);
 };
 
 template <class T>
