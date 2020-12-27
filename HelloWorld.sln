@@ -49,6 +49,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Classes_5_TemplateClasses",
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Classes_6_Exceptions", "Classes_6_Exceptions\Classes_6_Exceptions.vcxproj", "{672E82A5-99E9-47D5-A8CE-EDA8FD37406C}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Classes_6_CustomExceptions", "Classes_6_CustomExceptions\Classes_6_CustomExceptions.vcxproj", "{8C59D153-422D-4ACD-BF65-0AA9D5FD954D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -241,6 +243,14 @@ Global
 		{672E82A5-99E9-47D5-A8CE-EDA8FD37406C}.Release|x64.Build.0 = Release|x64
 		{672E82A5-99E9-47D5-A8CE-EDA8FD37406C}.Release|x86.ActiveCfg = Release|Win32
 		{672E82A5-99E9-47D5-A8CE-EDA8FD37406C}.Release|x86.Build.0 = Release|Win32
+		{8C59D153-422D-4ACD-BF65-0AA9D5FD954D}.Debug|x64.ActiveCfg = Debug|x64
+		{8C59D153-422D-4ACD-BF65-0AA9D5FD954D}.Debug|x64.Build.0 = Debug|x64
+		{8C59D153-422D-4ACD-BF65-0AA9D5FD954D}.Debug|x86.ActiveCfg = Debug|Win32
+		{8C59D153-422D-4ACD-BF65-0AA9D5FD954D}.Debug|x86.Build.0 = Debug|Win32
+		{8C59D153-422D-4ACD-BF65-0AA9D5FD954D}.Release|x64.ActiveCfg = Release|x64
+		{8C59D153-422D-4ACD-BF65-0AA9D5FD954D}.Release|x64.Build.0 = Release|x64
+		{8C59D153-422D-4ACD-BF65-0AA9D5FD954D}.Release|x86.ActiveCfg = Release|Win32
+		{8C59D153-422D-4ACD-BF65-0AA9D5FD954D}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
