@@ -158,5 +158,71 @@ int* dynamicInt = new int;
 delete ptr;
 delete [] myArrayPtr;
 
+////// Classes basics
 
-////// Classes
+// Sta su klase, cemu sluze ?
+// Sta su i koji specifikatori pristupa postoje ?
+// Sintaksa deklaracije klase (pozdrazumevani specifikator pristupa) ?
+// .cpp, .h fajlovi ? 
+
+// Konstruktori, desktruktori ?
+void ClassName(int param1, int param2); // Is this validly declared constructor for class `ClassName`
+
+// Is the following a valid destruktor implementation ?
+ClassName()
+{
+	delete this->name;
+}
+
+// Koliko konstruktora klasa moze da sadrzi, koliko podrazumevanih (default) konstruktora, sta se desi kada klasa ne deklarise podrazumevani konstruktor/destruktor ?
+// Sta se desi ako nije definisan konstruktor za kopiranje unutar klase ?
+
+class Vozilo { ... }
+Vozilo v(); // Da li je ovo validno pozvan konstruktor za klasu Vozilo ? (ne, to je deklaracija funkcije ciji je povratni tip Vozilo)
+
+// Konstruktori za kopiranje ?
+
+// `this` pokazivac
+
+// inline funkcije, inline kjucna rec ?
+
+// Prenos po vrendosti, referenci, pokazivacu ?
+
+void f(const T& a); // What does `const` indicate here ?
+
+// Staticki atributi klase (polja i funkcije) ? (pripadnost klasi, a ne objektu)
+// Deklaracija statickih atributa i koriscenje statickih atributa
+static float max = 320.34f;
+MyClass::max;
+
+// friend funkcije, friend klase ?
+
+////// Operator overloading
+
+// Sta je predefinisanje operatora ?
+
+// Koji operatori ne mogu biti predefinisani ?
+// Operators ::  .  .*  ?: CANNOT be overloaded
+
+// Sta nije moguce kod pisanja operatorskih funkcija ?
+// Operators ::  .  .*  ?: CANNOT be overloaded
+// New operators CANNOT be created
+// Precedence, grouping or number of operator operands cannot be changed
+// && and || lose short circut evaluation
+
+// Da li su ovo validni nacini da se pozove predefinisan operator+ ?
+a.operator+(b);
+a + b
+
+// Predefinisanje operatora dodele (operator=), sta ako ne postoji predefinisan ?
+// Kakvo dodeljivanje vrsi operator= u slucaju da se generise od strane kompajlera ? (shallow copy)
+
+// Razlika izmedju konstruktora za kopiranje i operator= ?
+Vozilo v1;
+Vozilo v2 = v1; // Da li ce ovde biti pozvan operator= ?
+
+// Predefinisanje prefiks i postfix operatora ?
+
+////// Classes inheritance
+
+// TODO: cas9, 10, 11 and on ...
