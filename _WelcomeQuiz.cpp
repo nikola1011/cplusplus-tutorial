@@ -225,4 +225,70 @@ Vozilo v2 = v1; // Da li ce ovde biti pozvan operator= ?
 
 ////// Classes inheritance
 
-// TODO: cas9, 10, 11 and on ...
+// Sta je nasledjivanje ?
+
+// Sta se NE nasledjuje od osnovne klase ?
+// Constructors and Destructor    
+// Assignment operator members (operator=)
+// Friends
+// private members
+
+// Specifikatori pristupa u nasledjivanju ?
+/// Access specifiers:
+/// 
+//  In base class 	    When inherited publicly 	When inherited privately 	When inherited protectedly
+//  Public 		        Public 				        Private 			        Protected
+//  Protected 	        Protected 			        Private 			        Protected
+//  Private	            Inaccessible 			    Inaccessible 			    Inaccessible
+
+// Sta je polimorfizam ?
+// "Polimorfizam omogućava da klasa saopšti da ima isti interfejs kao i osnovna klasa, ali da je ponašanje izvedene klase različito od ponašanja osnovne klase"
+
+// Virtuelne funkcije ?
+// "Virtualna funkcija je funkcija (operacija) članica za koju se očekuje da bude redefinisana u nasleđenim klasama."
+
+// Koji je redosled poziva konstruktora izvedene klase, koji je redosled poziva desktruktora izvedene klase ?
+
+// Zasto i da li je potrebno da desktruktor u osnovnoj bude oznacen kao `virtual` ?
+
+// Da li je moguce da pokazivac osnovne klase pokazuje na izvedenu, da li je moguce obrnuto ?
+Base* baseDynamicPtr = new Derived();
+baseDynamicPtr->nonVirtualFunc();
+baseDynamicPtr->virtualFunc();
+
+// Sta su apstraktne klase, sta ih cini apstraktnim ?
+
+// Da li je ovo validno deklarisana cista virtuelna funkcija ?
+virtual void pureVirtualFunction() = 0;
+
+// Da li je `Derived` klasa apstraktna ?
+class Base
+{
+	virtual void pureVirtualFunction() = 0;
+}
+class Derived : public Base
+{
+}
+
+////// Templates
+
+// Sta su sabloni(genericke funkcije), zbog cega su korisne ?
+// "Funkcije ili klase opisane pomoću šablona nazivaju se generičke funkcije ili generičke klase. Na osnovu njih se kasnije generišu konkretne funkcije ili klase."
+
+// Sintaksa deklaracije template funkcije ?
+
+// Kada se tipski parametar menja konkretnim tipom ? Kompajler to menja prilikom prevodjenja
+
+// Tipski i netipski sabloni ?
+
+////// Izuzeci
+
+// Zasto postoje izuzeci i kako se koriste ?
+
+// Svrha `try`, `catch` blokova ?
+
+// Tok izvrsenja programa kada se desi i kada se ne desi izuzetak ?
+
+// Redosled `catch` blokova ?
+
+// Genericki `catch` blok ?
