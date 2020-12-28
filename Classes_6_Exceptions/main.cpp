@@ -44,6 +44,7 @@ int main()
         throw 'C';
         throw string("StringException");
         throw "Exception";
+        // throw MyCustomException("blabla");
         throw exception("STD Exception message");
     }
     catch (int e)
